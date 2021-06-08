@@ -40,12 +40,17 @@ public class Customer {
 	public void setPhone(String phone) {
 		Phone = phone;
 	}
+	public float tax() {
+		return tax/100;
+	}
 	
-//	public int tinhLuong() {
-//		this.luong = this.luongCoBan - this.luongCoBan * this.tax ;
-//		return this.luong;
-//	}
-//	
+	public int tinhLuong() {
+		return (int) (this.luongCoBan - this.luongCoBan * tax()) ;
+	}
+	
+	public String money() {
+		return "Khach hang "+ this.FullName + " duoc tra luong " + tinhLuong() + " dong";
+	}
 	@Override
 	public String toString() {
 		return "Fullname: " + this.FullName + ", Address: " + this.Address + 

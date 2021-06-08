@@ -31,6 +31,10 @@ public class Main {
 			System.out.println("Thong tin cua khach hang:");
 			System.out.println(kaka.toString());
 	}
+		for(Customer money :danhsach) {
+			System.out.println("So tien ma khach hang duoc tra:");
+			System.out.println(money.money());
+		}
 	}
 }
 
